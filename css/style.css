@@ -1,0 +1,273 @@
+/* Css reset */
+body{
+    margin: 0px;
+    padding: 0px;
+
+
+}
+/* Css variable */
+:root{
+    --navbar-height:59px;
+}
+/* Navigation Bar */
+
+#navbar{
+    top: 0px;
+    left: 0px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    /* position absolute karne pe background apne parent ke upar chala jaega  */
+}
+#navbar::before{
+  content: "";
+  background-color: black;
+  opacity: 0.6;
+  /* backgroundcolor laane ke lye height and width deni hogi aur 100% hi denge */
+  height: 100%;
+  width: 100%;
+  /* position absolute dene se bar upar chipka rehega */
+  position: absolute;
+  /* z-index -1 dene se jo content the home vagera vo background ke piche the pehle abb isske baad aage aa jayege */
+  z-index: -1;
+
+
+}
+/* Navigation Bar:Logo And Image */
+#logo{
+    margin: 17px 38px;
+     
+}
+#logo img{
+    border-radius: 45%;
+    height: 54px;
+    margin: -25px  -26px;
+    
+}
+/* Navigation BAr:List Styling */
+
+#navbar ul{
+    display: flex;
+    flex-wrap: wrap;
+    /* align-content: center; */
+    justify-content: center;
+}
+#navbar ul li {
+     
+    list-style: none;
+    /* list style none karne se bindu hatt jaege and remember this be only used only if we have made the list*/
+
+    font-size: 1.2rem;
+}
+#navbar ul li a{
+    /* List ke beech space vagerah dene ke liye */
+  display: block;
+  padding: 5px 34px;
+  color: white; 
+  /* none in text in order to remove underline */
+  text-decoration: none;
+  font-family: 'Baloo Thambi 2', cursive;
+}
+#navbar ul li a:hover{
+    color:black;
+    background-color:white;
+    border-radius: 34%;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 537px;
+    padding: 62px 78px;
+
+}
+/* Generally for background we will use before property in css */
+#home::before{
+  content: "";
+  /* postion absolute daalna must hai iss method se */
+  position: absolute;
+  /* no reapet se reapeat nhi hoga aur cover cover/center se centre cover karega */
+  background: url(../img/pexels-ella-olsson-1640777.jpg) no-repeat center center/cover;
+ background-color: grey;
+ display: flex;
+ background-blend-mode: color-burn;
+  height: 95%;
+  width: 100%;
+  /* top and left issliye 0 hai taaki background upar char jaye navigation bar pe */
+  top: 0%;
+  left: 0%;
+  z-index: -1;
+  opacity: .95;
+}
+/* Utility Classes */
+#home h1{
+    color: white;
+    text-align: center;
+   font-size: 2.0rem;
+   font-family: 'Oswald', sans-serif;
+   font-weight: 700;
+}
+.h-primary{
+    font-size: 3.8rem;
+    padding: 8px;
+    font-family: sans-serif;
+    
+}
+.h-secondary{
+    font-size: 2.3rem;
+    padding: 8px;
+    font-family: sans-serif;
+}
+#home p{
+    font-family: 'Baloo Thambi 2', cursive;
+    color: white;
+}
+.btn{
+    padding: 3px 8px;
+    color: white;
+    background-color: black;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: 'Alumni Sans', sans-serif;
+}
+.btn:hover{
+    color: black;
+    background-color: white;
+}
+.center{
+    text-align: center;
+}
+/* Services Section */
+.services-container{
+    display: flex;
+    flex-direction: column;
+    /* height: 555px; */
+}
+.services{
+    margin :34px;
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    justify-content: space-around;
+   
+}
+.box{
+    border: 3px solid black;
+    margin: 3px;
+    padding: 3px 12px;
+    border-radius: 24px;
+    background-color: rgb(236, 215, 215);
+    display: flex;
+    flex: 0 0 200px;
+    /* flex-direction: column; */
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+     align-items: center; 
+    text-align: center;
+
+}
+.box img{
+    height: 300px;
+    width: 300px;
+    display: block;
+    margin: auto;
+    border-radius: 15px;
+
+}
+/* Client Section */
+#client-section{
+   padding: 10px;
+   position: relative;
+}
+#client-section::before{
+    content: "";
+  /* postion absolute daalna must hai iss method se */
+  position: absolute;
+  /* no reapet se reapeat nhi hoga aur cover cover/center se centre cover karega */
+  background: url(../img/pexels-ella-olsson-1640777.jpg) no-repeat center center/cover;
+ background-color: grey;
+ display: flex;
+ background-blend-mode: color-burn;
+  height: 480px;
+  width: 100%;
+  /* top and left issliye 0 hai taaki background upar char jaye navigation bar pe */
+  top: 0%;
+  left: 0%;
+  z-index: -1;
+  opacity: 0.5;
+}
+.clients-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.clients-logo img{
+    height: 81px;
+    margin: 34px;
+
+}
+
+/* Contact Us */
+#contact-us{
+   margin: 2px;
+ 
+}
+.contact-section{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+    align-items: center;
+}
+.contact-section::before{
+    content: "";
+    /* postion absolute daalna must hai iss method se */
+    position: absolute;
+    /* no reapet se reapeat nhi hoga aur cover cover/center se centre cover karega */
+    background: url(../img/Contact-Us/pexels-negative-space-33999.jpg) no-repeat center center/cover;
+   background-color: grey;
+   display: flex;
+   background-blend-mode: color-burn;
+    height: 480px;
+    width: 100%;
+    /* top and left issliye 0 hai taaki background upar char jaye navigation bar pe */
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+    opacity: 0.5;
+    flex-wrap: wrap;
+
+}
+.contact-section form{
+   padding: 2px;
+    display: flex;
+    
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.form-group{
+    margin: 10px;
+    
+}
+.form-group input{
+    width: 125%;
+    border-radius: 7px
+}
+
+
+/* Footer */
+footer{
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+}
+
+
